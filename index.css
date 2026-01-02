@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: "DM Serif Text", serif;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #82a59b;
+}
+
+button {
+    color: white;
+    background: #82a59b;
+    padding: 10px 20px;
+    /* padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px; */
+}
