@@ -9,13 +9,13 @@ input {
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #82a59b;
+    margin-bottom: 4px;
 }
 
 button {
     color: white;
     background: #82a59b;
     padding: 10px 20px;
-    /* padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px; */
+    border: none;
+    font-weight: bold;
 }
