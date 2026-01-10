@@ -1,4 +1,4 @@
-let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
+let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
@@ -6,17 +6,18 @@ const ulEl = document.getElementById("ul-el")
 
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value)
-    console.log(myLeads)
+    renderLeads()
 })
 
+function renderLeads(){
 let listItems = ""
 for (let i=0; i< myLeads.length; i++) {
     listItems += "<li>" + myLeads[i] + "</li>"
 
-    //const li = document.createElement("li") //create element
-    //li.textContent = myLeads[i] //set text content
-    //ulEl.append(li) //append to ul
+    
+}
+ulEl.innerHTML = listItems
 }
 
-//render the listItems inside the unordered list using ulEl.innerhtml
-ulEl.innerHTML = listItems
+
+
