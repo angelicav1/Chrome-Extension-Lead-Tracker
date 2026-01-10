@@ -1,9 +1,8 @@
 let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
-// Grab the unordered list and store it in a const variable called ulEl
 const ulEl = document.getElementById("ul-el")
-console.log(ulEl)
+
 
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value)
@@ -12,5 +11,9 @@ inputBtn.addEventListener("click", function(){
 
 
 for (let i=0; i< myLeads.length; i++) {
-    ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+    //ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+
+    const li = document.createElement("li") //create element
+    li.textContent = myLeads[i] //set text content
+    ulEl.append(li) //append to ul
 }
