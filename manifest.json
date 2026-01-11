@@ -4,6 +4,6 @@
     "name": "Nature Archives Leads Tracker",
     "action": {
         "default_popup": "index.html",
-        "default_icon": "icon.jpg"
+        "default_icon": "icon.png"
     }
 }
