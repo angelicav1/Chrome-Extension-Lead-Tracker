@@ -1,4 +1,14 @@
-let myLeads = []
+let myLeads = `["www.bestleadever.com"]`
+
+myLeads = JSON.parse(myLeads) //turn the myLeads string into an array
+
+myLeads.push("www.lead2.com") //push a new value to the array
+
+myLeads = JSON.stringify(myLeads) //converts the lead into a string again
+
+console.log(typeof myLeads) //console.log the string using typeof to verify that it's a string
+
+
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
