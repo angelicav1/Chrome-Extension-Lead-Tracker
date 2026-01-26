@@ -11,6 +11,14 @@ const ulEl = document.getElementById("ul-el")
 // Store it in a variable, leadsFromLocalStorage
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
+//Check if leadsFromLocalStorage is truthy
+//If so, set myLeads to its value and call renderLeads()
+
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage
+    renderLeads()
+}
+
 // Log out the variable
 console.log(leadsFromLocalStorage)
 
