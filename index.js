@@ -7,15 +7,17 @@ const ulEl = document.getElementById("ul-el")
 //let dog = localStorage.getItem("favDog")
 //console.log(dog)
 
-localStorage.clear()
+// Get the leads from the localStorage - PS: JSON.parse()
+// Store it in a variable, leadsFromLocalStorage
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+
+// Log out the variable
+console.log(leadsFromLocalStorage)
 
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value)
     inputEl.value = ""
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    
-
-
     renderLeads()
 })
 
