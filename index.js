@@ -2,25 +2,12 @@ let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
-
-//localStorage.setItem("favDog", "Maja")
-//let dog = localStorage.getItem("favDog")
-//console.log(dog)
-
-// Get the leads from the localStorage - PS: JSON.parse()
-// Store it in a variable, leadsFromLocalStorage
 let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
-
-//Check if leadsFromLocalStorage is truthy
-//If so, set myLeads to its value and call renderLeads()
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     renderLeads()
 }
-
-// Log out the variable
-console.log(leadsFromLocalStorage)
 
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value)
@@ -32,8 +19,6 @@ inputBtn.addEventListener("click", function(){
 function renderLeads(){
 let listItems = ""
 for (let i=0; i< myLeads.length; i++) {
-    //listItems += "<li><a target='_blank' href=' " + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
-    //Template Strings are cleaner
       listItems += `
       <li>
       <a target='_blank' href='${myLeads[i]}'>
