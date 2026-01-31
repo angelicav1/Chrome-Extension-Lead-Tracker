@@ -3,12 +3,21 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
+const tabBtn = document.getElementById("tab-btn")
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
 }
+
+const tabs = [
+    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+]
+
+tabBtn.addEventListener("click", function(){
+    console.log(tabs[0].url)
+})
 
 function render(leads){
 let listItems = ""
@@ -36,6 +45,7 @@ inputBtn.addEventListener("click", function(){
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     render(myLeads)
 })
+
 
 
 
